@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* ==========================================
+   Універсальний селектор та базові правила
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #faf8f5;
+    padding: 20px;
+}
+
+/* ==========================================
+   Селектори ідентифікаторів (#id) та класів (.class)
+   ========================================== */
+#univ-name {
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.header-smaller {
+    letter-spacing: 0.5px;
+}
+
+#main-title {
+    color: #b85d59;
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 15px 0;
+}
+
+.description {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* ==========================================
+   Селектори нащадків та дочірні
+   ========================================== */
+.author-info b {
+    color: #8c4a45;
+}
+
+.author-info > strong {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ==========================================
+   Селектори сусідів та атрибутів
+   ========================================== */
+blockquote + h2 {
+    margin-top: 25px;
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+abbr[class*="brand"] {
+    color: #a83232;
+    font-weight: bold;
+    text-decoration: underline dotted;
+}
+
+/* ==========================================
+   Псевдокласи та псевдоелементи
+   ========================================== */
+a:link {
+    color: #9c413d;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #702f2c;
+}
+
+a:hover {
+    color: #d15a55;
+    text-decoration: underline;
+}
+
+a:active {
+    background-color: #f0d6d5;
+}
+
+input:checked {
+    accent-color: #b85d59;
+}
+
+article p:empty {
+    display: none;
+}
+
+/* Псевдоелементи застосовуємо акуратно лише до звичайних текстів (не чіпаючи новини з маркерами) */
+.description::first-letter,
+.author-info::first-letter {
+    font-size: 1.3rem;
+    color: #b85d59;
+}
+
+/* Директива !important (згідно з варіантом) */
+.highlight-text {
+    background-color: #fff3f2 !important;
+    padding: 10px;
+    border-left: 3px solid #b85d59;
+    margin-top: 10px;
+}
